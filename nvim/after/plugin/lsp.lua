@@ -5,3 +5,11 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 require'lspconfig'.gopls.setup{}
+
+local cmp = require('cmp')
+
+cmp.setup({
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({ select = false})
+    }
+})
